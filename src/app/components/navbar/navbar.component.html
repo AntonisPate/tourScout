@@ -1,0 +1,25 @@
+<div class="navbar">
+  <div class="text">
+    <h1>{{ "Welcome to " | translate }}tourScout!</h1>
+  </div>
+  <div class="search">
+    <input
+      [placeholder]="'Search for destination' | translate"
+      (change)="search($event)"
+    />
+  </div>
+  <div>
+    <div class="flag">
+      <img
+        (click)="toggleLang()"
+        *ngIf="currentLang === 'fr'"
+        src="../../../assets/images/en.png"
+      />
+      <img
+        (click)="toggleLang()"
+        *ngIf="currentLang === 'en'"
+        src="../../../assets/images/fr.jpg"
+      />
+    </div>
+  </div>
+</div>

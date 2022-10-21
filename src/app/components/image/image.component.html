@@ -1,0 +1,9 @@
+<div class="imageC">
+  <img
+    [ngStyle]="{ display: loaded ? 'block' : 'none' }"
+    [src]="image.src.original"
+    width="300"
+    (load)="loaded = true"
+  />
+  <div *ngIf="!loaded">{{ "Loading" | translate }}...</div>
+</div>
